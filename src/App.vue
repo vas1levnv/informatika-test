@@ -40,6 +40,7 @@ ul {
   min-height: 100vh;
   min-width: 320px;
   width: 100vw;
+  overflow-x: hidden;
   background: rgb(2, 0, 36);
   background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(77, 82, 130, 1) 0%, rgba(2, 9, 35, 1) 71%);
   display: flex;

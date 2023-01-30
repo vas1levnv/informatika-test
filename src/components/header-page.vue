@@ -2,7 +2,7 @@
   <header>
     <div class="container">
       <div class="header-wrapper">
-        <ul class="header-list">
+        <ul class="header-list" :class="{active: isActiveBtn}">
           <li><a href="#">Билеты и абонементы</a></li>
           <li><a href="#">Как купить?</a></li>
           <li><a href="#">Правила</a></li>
@@ -149,6 +149,41 @@ export default {
 
 .header-btn.active span {
   opacity: 0;
+}
+
+@media (max-width: 1024px){
+  .header-list li{
+    margin:  0 10px;
+  }
+}
+
+@media (max-width: 768px){
+  .header-wrapper{
+    position: relative;
+    z-index: 10;
+  }
+
+  .header-list{
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+    position: fixed;
+    top: 85px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 85px);
+    background: #020923;
+    z-index: 11;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-list li{
+    margin:  15px 0;
+  }
+
+ .header-list.active{
+   transform: translateY(0);
+  }
 }
 
 </style>
